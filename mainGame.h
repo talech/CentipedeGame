@@ -17,6 +17,8 @@
 #include <NiSample.h>
 
 
+
+
 class mainGame : public NiSample
 {
 public:
@@ -30,6 +32,7 @@ public:
 protected:
 	NiCameraPtr m_spCamera1;
 	NiCameraPtr m_spCamera2;
+	
 
 	void SwitchCamera();
     

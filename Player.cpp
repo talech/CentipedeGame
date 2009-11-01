@@ -10,10 +10,10 @@ namespace CentipedeGame
 	    
 		m_fLastUpdateTime = 0.0f;
 		
-		m_xBoundNeg = -7.7;
-		m_xBoundPos = 7.7;
+		m_xBoundNeg = -11.5;
+		m_xBoundPos = 4;
 		m_zBoundNeg = 4;
-		m_zBoundPos = 8.9;
+		m_zBoundPos = 7.3;
 	   
 	}
 

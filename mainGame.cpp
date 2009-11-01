@@ -19,7 +19,6 @@
 NiEmbedGamebryoLicenseCode;
 
 #include "mainGame.h"
-#include "GameObjectManager.h"
 #include "Player.h"
 
 using namespace CentipedeGame;
@@ -58,7 +57,9 @@ void mainGame::UpdateFrame()
 //---------------------------------------------------------------------------
 bool mainGame::CreateScene()
 {
-    // Because our scene will have some billboards with alpha, we use 
+	//GameObjectManager::getInstance();
+    
+	// Because our scene will have some billboards with alpha, we use 
     // a NiAlphaAccumulator in order that our alpha gets sorted and drawn
     // correctly.
     NiAlphaAccumulator* pkAccum = NiNew NiAlphaAccumulator;
@@ -116,16 +117,19 @@ bool mainGame::CreateScene()
 				NIASSERT(m_spCamera2);
 			}
 		}
-			
+		
 		else if (NiIsKindOf(NiLight, pkObject))
 			kLights.Add((NiLight*) pkObject);
-		else if (NiIsKindOf(NiNode, pkObject))
+		else if (NiIsKindOf(NiNode, pkObject)){
 			kScenes.Add((NiNode*) pkObject);
+			
+		}
 		else
 		{
 			// unknown object, handle it somehow
 		}
 	}
+	//GameObjectManager::addObjectScenes(kScenes);
 	
 	NiNode* pkGnome = (NiNode*)m_spScene->GetObjectByName("|gnome");
 

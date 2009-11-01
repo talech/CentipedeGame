@@ -2,6 +2,8 @@
 #define GameObjectManager_H
 
 #include <vector>
+#include <NiApplication.h>
+
 #include "GameObject.h"
 #include "Mushroom.h"
 #include "GameGrid.h"
@@ -24,6 +26,8 @@ namespace CentipedeGame
 
 		void updateAllObjects( float fTime );
 
+		//void addObjectScenes(NiTObjectArray<NiNodePtr> kObjects){mObjectScenes = kObjects;}
+
 		GameGrid& getGrid();
 
 		static GameObjectManager* getInstance() { return &mInst; }
@@ -38,6 +42,7 @@ namespace CentipedeGame
 		std::vector<GameObject*> mObjects;
 
 		GameGrid mGameGrid;
+		//NiTObjectArray<NiNodePtr> mObjectScenes;
 	};
 }
 #endif

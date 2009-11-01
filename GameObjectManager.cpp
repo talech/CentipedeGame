@@ -5,7 +5,7 @@ namespace CentipedeGame
 	GameObjectManager GameObjectManager::mInst;
 
 	GameObjectManager::GameObjectManager()
-	:mGameGrid(15, 25)
+	:mGameGrid(31, 34)
 	,mObjects()
 	{
 	}
